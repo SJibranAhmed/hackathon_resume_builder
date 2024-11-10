@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume Builder App</title>
+</head>
+<body>
+    <section class="container">
+        <header>Resume Builder App</header>
+        <form action="" class="form" id="resumeForm">
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="input-box">
+                    <label for="_name">Full Name</label>
+                    <input type="text" id="_name" placeholder="Enter your full name" required />
+                </div>
+                <div class="input-box">
+                    <label for="_email">Email Address</label>
+                    <input type="email" id="_email" placeholder="Email address" required />
+                </div>
+                <div class="input-box">
+                    <label for="_address">Residential Address</label>
+                    <input type="text" id="_address" placeholder="Address" required />
+                </div>
+                <div class="colum">
+                    <div class="input-box">
+                        <label for="_phone">Phone Number</label>
+                        <input type="tel" id="_phone" placeholder="Number" required />
+                    </div>
+                    <div class="photos">
+                        <label for="_photo">Upload Photo</label>
+                        <input type="file" id="_photo" required />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Education Section -->
+            <fieldset>
+                <legend>Education</legend>
+                <div class="input-box">
+                    <label for="_ins_name">Institution Name</label>
+                    <input type="text" id="_ins_name" placeholder="Enter your institution name" required />
+                </div>
+                <div class="input-box">
+                    <label for="_curr_job">Current Job</label>
+                    <input type="text" id="_curr_job" placeholder="Enter your job" required />
+                </div>
+                <div class="colum">
+                    <div class="input-box">
+                        <label for="_degree">Degree</label>
+                        <input type="text" id="_degree" placeholder="Enter your degree" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="_pass_year">Passing Year</label>
+                        <input type="number" id="_pass_year" placeholder="Passing year" required />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Skills Section -->
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="_skills">Enter skills you have:</label><br /><br />
+                <textarea name="skills" placeholder="Enter your skills in detail..." id="_skills" required></textarea>
+            </fieldset>
+
+            <!-- Experience Section -->
+            <fieldset>
+                <legend>Experience</legend>
+                <div class="input-field">
+                    <label for="_exp">Work Experience</label><br /><br />
+                    <textarea name="exp" id="_exp" placeholder="Enter your work experience in detail..." required></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="submit_btn">Generate Form</button>
+        </form>
+    </section>
+
+    <!-- Generated CV Section -->
+    <div class="showCv">
+        <div class="main" id="resumePage">
+            <div class="leftSide">
+                <h1 class="name" id="name"><strong>Sheikh Jibran</strong></h1>
+                <p class="d_p" id="curr_job">Software Developer</p>
+                <div class="profile">
+                    <img id="photo" src="IMG-20241021-WA0082.jpg" />
+                    <h2>About Me</h2>
+                    <p class="about_p">I am a dedicated professional with a passion for my work, always seeking opportunities to grow and contribute to innovative projects.</p>
+                </div>
+                <p class="p_h">
+                    <ion-icon class="bx" name="call-outline"></ion-icon>
+                    <span id="phone">031599363336</span>
+                </p>
+                <p class="p_h">
+                    <ion-icon class="bx" name="mail-outline"></ion-icon>
+                    <span id="email">Sheikhjibran889970@gmail.com</span>
+                </p>
+                <p class="p_h">
+                    <ion-icon class="bx" name="location-outline"></ion-icon>
+                    <span id="address">Orangi Town Karachi</span>
+                </p>
+            </div>
+            <div class="rightSide">
+                <div class="content">
+                    <h3>Education</h3>
+                    <div class="content-inner">
+                        <h4>Education & Certifications</h4>
+                        <div class="para" id="ins_name"></div>
+                    </div>
+                    <h3>Experience</h3>
+                    <div class="content-inner">
+                        <h4>Work Experience</h4>
+                        <div class="para" id="exp"></div>
+                    </div>
+                    <h3>Skills</h3>
+                    <div class="content-inner">
+                        <h4>Expert in Skills</h4>
+                        <div class="para" id="skills"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button type="button" id="edit_btn">Back to Form</button>
+            <button type="button" id="download_btn">Download PDF</button>
+            <button type="button" id="share_btn">Share</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
